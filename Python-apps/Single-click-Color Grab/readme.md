@@ -8,7 +8,7 @@
 - Auto exits
 
 ---
-### Instal as .exe
+### Install as .exe
 ```
 
 pyinstaller --noconsole --onefile --icon="cg.ico" ColorGrab.py
