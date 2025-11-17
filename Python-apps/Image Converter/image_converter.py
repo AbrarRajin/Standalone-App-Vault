@@ -7,9 +7,9 @@ from pathlib import Path
 class ImageConverterApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Master Image Converter")
-        self.root.geometry("700x600")
-        self.root.resizable(False, False)
+        self.root.title("Image Converter")
+        self.root.geometry("700x800")
+        self.root.resizable(True, True)
         
         # Premium dark purple theme colors
         self.bg_dark = "#0a0a0f"
@@ -20,7 +20,7 @@ class ImageConverterApp:
         self.purple_glow = "#e9d5ff"
         self.text_primary = "#f8fafc"
         self.text_secondary = "#94a3b8"
-        self.accent = "#06b6d4"
+        self.accent = "#95efff"
         
         # Configure root
         self.root.configure(bg=self.bg_dark)
@@ -39,12 +39,12 @@ class ImageConverterApp:
         title_frame = tk.Frame(main_frame, bg=self.bg_card)
         title_frame.pack(pady=(0, 30))
         
-        title_label = tk.Label(title_frame, text="MASTER IMAGE CONVERTER", 
+        title_label = tk.Label(title_frame, text="IMAGE CONVERTER", 
                               font=('Segoe UI', 24, 'bold'),
                               bg=self.bg_card, fg=self.purple_light)
         title_label.pack()
         
-        subtitle_label = tk.Label(title_frame, text="Premium Edition", 
+        subtitle_label = tk.Label(title_frame, text="", 
                                  font=('Segoe UI', 10),
                                  bg=self.bg_card, fg=self.text_secondary)
         subtitle_label.pack()
@@ -156,7 +156,7 @@ class ImageConverterApp:
         btn_glow_frame = tk.Frame(main_frame, bg=self.purple_glow, padx=2, pady=2)
         btn_glow_frame.pack(pady=(10, 15))
         
-        self.convert_btn = tk.Button(btn_glow_frame, text="⚡ CONVERT NOW", 
+        self.convert_btn = tk.Button(btn_glow_frame, text="CONVERT NOW", 
                                     command=self.convert_images,
                                     state='disabled',
                                     font=('Segoe UI', 13, 'bold'),
@@ -174,7 +174,7 @@ class ImageConverterApp:
         # Status label
         self.status_label = tk.Label(main_frame, text="", 
                                     font=('Segoe UI', 10),
-                                    bg=self.bg_card, fg=self.accent)
+                                    bg=self.bg_card, fg='#FFFFFF')
         self.status_label.pack()
         
         # Store selected files
@@ -281,7 +281,7 @@ class ImageConverterApp:
         else:
             img.save(output_path, output_format)
         
-        self.status_label.config(text=f"✨ Converted successfully to {output_path.name}", 
+        self.status_label.config(text=f"Converted successfully to {output_path.name}", 
                                 fg=self.accent)
         messagebox.showinfo("Success", f"✓ Image converted successfully!\n\nSaved to:\n{output_path}")
     
@@ -330,7 +330,7 @@ class ImageConverterApp:
             for filename, error in failed_files[:5]:  # Show first 5 errors
                 result_msg += f"• {filename}: {error}\n"
         
-        self.status_label.config(text=f"✨ Batch conversion complete: {success_count}/{len(filepaths)}", 
+        self.status_label.config(text=f"Batch conversion complete: {success_count}/{len(filepaths)}", 
                                 fg=self.accent)
         messagebox.showinfo("Batch Conversion Complete", result_msg)
 
