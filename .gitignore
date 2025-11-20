@@ -208,3 +208,5 @@ __marimo__/
 
 # Small codes folder inside
 /Small codes
+#folder icon settings ignore
+desktop.ini
