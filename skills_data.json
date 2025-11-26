@@ -1,0 +1,26 @@
+{
+  "skills": [
+    {
+      "id": "skill1",
+      "name": "Guitar",
+      "icon": "\ud83c\udfb8",
+      "total_seconds": 0,
+      "is_active": false
+    },
+    {
+      "id": "skill2",
+      "name": "Painting",
+      "icon": "\ud83c\udfa8",
+      "total_seconds": 0,
+      "is_active": false
+    },
+    {
+      "id": "skill3",
+      "name": "Sports",
+      "icon": "\ud83c\udfd0",
+      "total_seconds": 0,
+      "is_active": false
+    }
+  ],
+  "active_skill_id": null
+}
