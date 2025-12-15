@@ -8,3 +8,11 @@ Collection of all standalone applications that serve different purpose all gathe
 
 ### MP4 Video Rotate
 [Video Rotator](/Python-apps/Rotate%20MP4/)
+
+### Time Keeper
+[Time Keeper](/Python-apps/time-keeper/)
+
+### Magic Packet Sender
+[Magic Packet Sender](/Python-apps/Magic-packet-sender/)
+
+
